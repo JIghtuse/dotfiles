@@ -1,0 +1,4 @@
+set keymap vi-insert
+
+"\e.": insert-last-argument
+"\C-l": clear-screen
