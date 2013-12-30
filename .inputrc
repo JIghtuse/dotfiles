@@ -1,4 +1,5 @@
 set keymap vi-insert
 
 "\e.": insert-last-argument
+"\C-e": backward-kill-word
 "\C-l": clear-screen
