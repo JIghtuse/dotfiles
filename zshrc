@@ -4,6 +4,8 @@ HISTSIZE=2000
 SAVEHIST=2000
 unsetopt nomatch
 bindkey -v
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '\e.' insert-last-word
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/jightuse/.zshrc'
