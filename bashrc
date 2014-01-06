@@ -8,7 +8,7 @@ HISTCONTROL=ignoreboth
 
 shopt -s histappend
 
-HISTSIZE=1000
+HISTSIZE=2000
 HISTFILESIZE=2000
 
 shopt -s checkwinsize
@@ -32,7 +32,6 @@ fi
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    #PS1='${debian_chroot:+($debian_chroot)}\u@\h [\W]\$ '
     PS1='${debian_chroot:+($debian_chroot)}\u@\h [\W]\$ '
 fi
 unset color_prompt force_color_prompt
@@ -50,21 +49,51 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
 fi
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+export LD_LIBRARY_PATH=/usr/local/lib
+
+SSH_ENV=$HOME/.ssh/environment
+   
+# start the ssh-agent
+function start_agent {
+    echo "Initializing new SSH agent..."
+    # spawn ssh-agent
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
+    echo succeeded
+    chmod 600 ${SSH_ENV}
+    . ${SSH_ENV} > /dev/null
+    /usr/bin/ssh-add
+}
+   
+if [ -f "${SSH_ENV}" ]; then
+     . ${SSH_ENV} > /dev/null
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+
 export CDPATH=":.:..:~:~/code"
-xset b off
 set -o vi
 # make bash show the return code http://david.newgas.net/return_code/
 export PROMPT_COMMAND='ret=$?; if [ $ret -ne 0 ] ; then echo -e "returned \033[01;31m$ret\033[00;00m"; fi'
+
 mkcd() { mkdir -p "$*" && cd $*; }
+randpw(){ < /dev/urandom tr -dc _A-Z-a-z-0-9\:\&\|\*\(\)\%\$\#\@ | head -c${1:-16};echo;}
+cdd(){ cd "$1" && ls; }
