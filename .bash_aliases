@@ -1,12 +1,17 @@
-alias dus='du -sh'
+# Navigation
 alias l='ls -F'
-alias ack='ack-grep --color-lineno="bold dark red"'
+alias la='ls -AF'
 alias d='df -h'
+
+# Tools
+alias dus='du -sh'
 alias gdb='gdb -q'
 alias v='vim'
 alias gv='gvim'
-alias ag='apt-get'
+
+# Apt
 alias ac='apt-cache'
 alias ap='aptitude'
-alias ud='sudo ap update && sudo ap upgrade'
+alias ag='apt-get'
 alias aps='apt-cache search'
+alias ud='sudo aptitude update && sudo aptitude upgrade'
