@@ -15,6 +15,7 @@ bindkey '\e.' insert-last-word
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+mkcd(){ mkdir -p "$*" && cd $*; }
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
