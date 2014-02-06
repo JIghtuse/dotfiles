@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="minimal"
+ZSH_THEME="uminimal"
 # minimal norm sammy sorin mrtazz philips sonicradish theunraveler wuffers
 # zhann nanotech
 
@@ -13,11 +13,6 @@ export EDITOR='vim'
 bindkey -v
 bindkey '^R' history-incremental-pattern-search-backward
 bindkey '\e.' insert-last-word
-
-if [ -f ~/.aliases ]; then
-    . ~/.aliases
-fi
-mkcd(){ mkdir -p "$*" && cd $*; }
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -64,6 +59,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GMOCK_HOME=/home/jightuse/code/cpp/mock
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -78,4 +74,19 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+man() {
+    env LESS_TERMCAP_mb=$'\E[01;31m' \
+    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+    LESS_TERMCAP_me=$'\E[0m' \
+    LESS_TERMCAP_se=$'\E[0m' \
+    LESS_TERMCAP_so=$'\E[38;5;246m' \
+    LESS_TERMCAP_ue=$'\E[0m' \
+    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+    man "$@"
+}
 
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
+alias -s mp4=vlc
+mkcd(){ mkdir -p "$*" && cd $*; }
