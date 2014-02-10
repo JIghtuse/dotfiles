@@ -90,3 +90,4 @@ if [ -f ~/.aliases ]; then
 fi
 alias -s mp4=vlc
 mkcd(){ mkdir -p "$*" && cd $*; }
+lss(){ ls -R $@ | less}
