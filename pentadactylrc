@@ -1,2 +1,4 @@
 set defsearch=duckduckgo
 colorscheme solarized-light
+set guioptions=bCrsn
+map <C-[> <Escape>
