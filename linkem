@@ -1,8 +1,10 @@
 #!/bin/bash
 
+pushd $HOME
 rm -f ~/.aliases ~/.bashrc ~/.inputrc ~/.zshrc ~/.pentadactylrc
 ln -s .dotfiles/aliases ~/.aliases
 ln -s .dotfiles/bashrc ~/.bashrc
 ln -s .dotfiles/inputrc ~/.inputrc
 ln -s .dotfiles/zshrc ~/.zshrc
 ln -s .dotfiles/pentadactylrc ~/.pentadactylrc
+popd
