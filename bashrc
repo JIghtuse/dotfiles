@@ -5,6 +5,7 @@ case $- in
 esac
 
 HISTCONTROL=ignoreboth
+HISTIGNORE="clear:history"
 
 shopt -s histappend
 
