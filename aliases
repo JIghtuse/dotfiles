@@ -15,3 +15,6 @@ alias ap='aptitude'
 alias ag='apt-get'
 alias aps='apt-cache search'
 alias ud='sudo aptitude update && sudo aptitude upgrade'
+
+# Various
+alias hl='history|less'
