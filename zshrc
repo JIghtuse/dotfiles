@@ -90,5 +90,7 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 alias -s mp4=vlc
+alias tmux="TERM=screen-256color-bce tmux"
 mkcd(){ mkdir -p "$*" && cd $*; }
 lss(){ ls -R $@ | less}
+
