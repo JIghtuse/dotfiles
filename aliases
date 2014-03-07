@@ -12,7 +12,7 @@ alias gv='gvim'
 # Apt
 alias ac='apt-cache'
 alias ap='aptitude'
-alias ag='apt-get'
+alias ag='ag'
 alias aps='apt-cache search'
 alias ud='sudo aptitude update && sudo aptitude upgrade'
 
