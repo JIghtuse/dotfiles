@@ -2,7 +2,7 @@
 
 pushd $HOME
 rm -f ~/.aliases ~/.bashrc ~/.inputrc ~/.zshrc ~/.pentadactylrc ~/.tmux.conf
-rm -f ~/.i3/config ~/.xmodmap ~/.xinitrc
+rm -f ~/.i3/config ~/.xmodmap ~/.xinitrc ~/.i3status.conf
 ln -s $HOME/.dotfiles/aliases ~/.aliases
 ln -s $HOME/.dotfiles/bashrc ~/.bashrc
 ln -s $HOME/.dotfiles/inputrc ~/.inputrc
@@ -13,4 +13,5 @@ mkdir -p ~/.i3
 ln -s $HOME/.dotfiles/i3-config ~/.i3/config
 ln -s $HOME/.dotfiles/xmodmap ~/.xmodmap
 ln -s $HOME/.dotfiles/xinitrc ~/.xinitrc
+ln -s $HOME/.dotfiles/i3status.conf ~/.i3status.conf
 popd
