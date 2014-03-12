@@ -75,6 +75,7 @@ unsetopt share_history
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+xset b off
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
     LESS_TERMCAP_md=$'\E[01;38;5;74m' \
