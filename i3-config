@@ -150,5 +150,5 @@ bar {
 }
 
 bindsym $mod+i workspace 3; exec iceweasel; workspace back_and_forth
-bindsym $mod+i workspace 4; exec icedove; workspace back_and_forth
-bindsym $mod+i workspace 5; exec okular; workspace back_and_forth
+bindsym $mod+Ctrl+l exec i3lock
+bindsym $mod+o workspace 5; exec okular; workspace back_and_forth
