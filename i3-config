@@ -152,3 +152,4 @@ bar {
 bindsym $mod+i workspace 3; exec iceweasel; workspace back_and_forth
 bindsym $mod+i workspace 4; exec icedove; workspace back_and_forth
 bindsym $mod+i workspace 5; exec okular; workspace back_and_forth
+bindsym $mod+p workspace 3; exec ipython3 qtconsole; workspace back_and_forth
