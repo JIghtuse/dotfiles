@@ -52,7 +52,7 @@ bindkey '\e.' insert-last-word
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(debian git)
+plugins=(debian)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,4 +94,3 @@ alias -s mp4=vlc
 alias tmux="TERM=screen-256color-bce tmux"
 mkcd(){ mkdir -p "$*" && cd $*; }
 lss(){ ls -R $@ | less}
-
