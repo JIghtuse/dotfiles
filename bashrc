@@ -96,5 +96,4 @@ set -o vi
 export PROMPT_COMMAND='ret=$?; if [ $ret -ne 0 ] ; then echo -e "returned \033[01;31m$ret\033[00;00m"; fi'
 
 mkcd() { mkdir -p "$*" && cd $*; }
-randpw(){ < /dev/urandom tr -dc _A-Z-a-z-0-9\:\&\|\*\(\)\%\$\#\@ | head -c${1:-16};echo;}
 cdd(){ cd "$1" && ls; }

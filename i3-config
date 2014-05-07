@@ -148,3 +148,5 @@ bindsym $mod+z mode "resize"
 bar {
         status_command i3status
 }
+
+bindsym $mod+n exec numlockx toggle
