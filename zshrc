@@ -52,14 +52,17 @@ bindkey '\e.' insert-last-word
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(debian)
+plugins=(debian go)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GMOCK_HOME=/home/jightuse/code/cpp/mock
+export GOPATH=/home/jightuse/code/go/
+export INFERNO_ROOT=/home/jightuse/code/projects/inferno
+export EMU="-r$INFERNO_ROOT -g1366x768 -c0"
+export PATH=$INFERNO_ROOT/Linux/386/bin:$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -92,5 +95,7 @@ if [ -f ~/.aliases ]; then
 fi
 alias -s mp4=vlc
 alias tmux="TERM=screen-256color-bce tmux"
-mkcd(){ mkdir -p "$*" && cd $*; }
-lss(){ ls -R $@ | less}
+mkcd() { mkdir -p "$*" && cd "$*"; }
+lss(){ ls -R $@ | less }
+wiki(){ dig +short txt $(echo "$*" | tr ' ' _).wp.dg.cx }
+cdd(){ cd "$1" && ls; }

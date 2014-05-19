@@ -149,6 +149,12 @@ bar {
         status_command i3status
 }
 
-bindsym $mod+i workspace 3; exec iceweasel; workspace back_and_forth
-bindsym $mod+Ctrl+l exec i3lock
-bindsym $mod+o workspace 5; exec okular; workspace back_and_forth
+bindsym $mod+n exec numlockx toggle
+
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +10% && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -10% && killall -SIGUSR1 i3status
+bindsym XF86Launch1 exec vlc
+
+exec rsibreak
+exec /home/jightuse/.i3/keys.sh
