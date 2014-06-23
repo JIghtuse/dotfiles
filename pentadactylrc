@@ -1,4 +1,5 @@
 set defsearch=duckduckgo
 colorscheme solarized-light
 set guioptions=bCrsn
+set hlfind
 map <C-[> <Escape>
