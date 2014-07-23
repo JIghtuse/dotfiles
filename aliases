@@ -18,3 +18,5 @@ alias ud='sudo aptitude update && sudo aptitude upgrade'
 
 # Various
 alias hl='history|less'
+alias gt='gdb -tui -nh'
+alias ct='cgdb -nh'
