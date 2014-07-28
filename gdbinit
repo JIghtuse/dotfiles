@@ -3319,6 +3319,11 @@ document attsyntax
 Change disassembly syntax to at&t flavor.
 end
 
+define print_and_go
+    printf $arg0, $arg1
+    continue
+end
+
 #EOF
 
 # Older change logs:
