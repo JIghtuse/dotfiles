@@ -95,6 +95,6 @@ fi
 alias -s mp4=vlc
 alias tmux="TERM=screen-256color-bce tmux"
 mkcd() { mkdir -p "$*" && cd "$*"; }
-lss(){ ls -R $@ | less }
+lss(){ tree $@ | less }
 wiki(){ dig +short txt $(echo "$*" | tr ' ' _).wp.dg.cx }
 cdd(){ cd "$1" && ls; }
