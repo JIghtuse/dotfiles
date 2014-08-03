@@ -98,3 +98,4 @@ mkcd() { mkdir -p "$*" && cd "$*"; }
 lss(){ tree $@ | less }
 wiki(){ dig +short txt $(echo "$*" | tr ' ' _).wp.dg.cx }
 cdd(){ cd "$1" && ls; }
+lls(){ locate "$*" | less}
