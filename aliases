@@ -8,6 +8,7 @@ alias dus='du -sh'
 alias gdb='gdb -q'
 alias v='vim'
 alias gv='gvim'
+alias vc='vim -u NONE' # "clean" vim, run without config
 
 # Apt
 alias ac='apt-cache'
