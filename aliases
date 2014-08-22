@@ -21,3 +21,5 @@ alias ud='sudo aptitude update && sudo aptitude upgrade'
 alias hl='history|less'
 alias gt='gdb -tui -nh'
 alias ct='cgdb -nh'
+alias py='python3' # I often mistype it as pytohn, so let's not type it at all
+alias ipy='ipython3'
