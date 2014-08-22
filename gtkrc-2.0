@@ -1,0 +1,90 @@
+# created by KDE, Fri Aug 22 08:57:21 2014
+#
+# If you do not want KDE to override your GTK settings, select
+# Appearance -> Colors in the System Settings and disable the checkbox
+# "Apply colors to non-KDE4 applications"
+#
+#
+
+gtk-alternative-button-order = 1
+
+style "default"
+{
+  bg[NORMAL] = { 0.918, 0.918, 0.922 }
+  bg[SELECTED] = { 0.408, 0.412, 0.420 }
+  bg[INSENSITIVE] = { 0.918, 0.918, 0.922 }
+  bg[ACTIVE] = { 0.741, 0.741, 0.753 }
+  bg[PRELIGHT] = { 0.918, 0.918, 0.922 }
+
+  base[NORMAL] = { 0.929, 0.929, 0.933 }
+  base[SELECTED] = { 0.408, 0.412, 0.420 }
+  base[INSENSITIVE] = { 0.918, 0.918, 0.922 }
+  base[ACTIVE] = { 0.408, 0.412, 0.420 }
+  base[PRELIGHT] = { 0.408, 0.412, 0.420 }
+
+  text[NORMAL] = { 0.000, 0.000, 0.000 }
+  text[SELECTED] = { 1.000, 1.000, 1.000 }
+  text[INSENSITIVE] = { 0.741, 0.741, 0.753 }
+  text[ACTIVE] = { 1.000, 1.000, 1.000 }
+  text[PRELIGHT] = { 1.000, 1.000, 1.000 }
+
+  fg[NORMAL] = { 0.000, 0.000, 0.000 }
+  fg[SELECTED] = { 1.000, 1.000, 1.000 }
+  fg[INSENSITIVE] = { 0.741, 0.741, 0.753 }
+  fg[ACTIVE] = { 0.000, 0.000, 0.000 }
+  fg[PRELIGHT] = { 0.000, 0.000, 0.000 }
+}
+
+class "*" style "default"
+
+style "ToolTip"
+{
+  bg[NORMAL] = { 0.918, 0.918, 0.922 }
+  base[NORMAL] = { 0.929, 0.929, 0.933 }
+  text[NORMAL] = { 0.000, 0.000, 0.000 }
+  fg[NORMAL] = { 0.000, 0.000, 0.000 }
+}
+
+widget "gtk-tooltip" style "ToolTip"
+widget "gtk-tooltips" style "ToolTip"
+
+style "MenuItem"
+{
+  bg[PRELIGHT] = { 0.408, 0.412, 0.420 }
+}
+
+class "*MenuItem" style "MenuItem"
+
+binding "gtk-vi-text-view"
+{
+  bind "<ctrl>d" { "move-cursor" (display-lines, 5, 0) }
+  bind "<ctrl>f" { "move-cursor" (display-lines, 5, 0) }
+  bind "<ctrl>u" { "move-cursor" (display-lines, -5, 0) }
+  bind "<ctrl>b" { "move-cursor" (display-lines, -5, 0) }
+  bind "<ctrl>e" { "move-cursor" (display-lines, -1, 0) }
+  bind "<ctrl>y" { "move-cursor" (display-lines, 1, 0) }
+  bind "j" { "move-cursor" (display-lines, 1, 0) }
+  bind "k" { "move-cursor" (display-lines, -1, 0) }
+  bind "l" { "move-cursor" (logical-positions, 1, 0) }
+  bind "h" { "move-cursor" (logical-positions, -1, 0) }
+}
+
+binding "gtk-vi-tree-view"
+{
+  bind "j" { "move-cursor" (display-lines, 1) }
+  bind "k" { "move-cursor" (display-lines, -1) }
+  bind "l" { "move-cursor" (logical-positions, 1) }
+  bind "h" { "move-cursor" (logical-positions, -1) }
+}
+
+class "GtkTextView" binding "gtk-vi-text-view"
+class "GtkTreeView" binding "gtk-vi-tree-view"
+
+binding "my-bindings"
+{
+    bind "Return" { "insert-at-cursor" ("\n") }
+    bind "<ctrl>j" { "message_send" () }
+    bind "<ctrl>v" { "paste" ("text") }
+    bind "<ctrl><shift>v" { "paste" ("html") }
+}
+widget "*pidgin_conv_entry" binding "my-bindings"

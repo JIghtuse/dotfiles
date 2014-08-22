@@ -1,13 +1,14 @@
 set editing-mode vi
 set bell-style none
-Control-o: " | less"
-Control-w: backward-kill-word
-"\ew": unix-filename-rubout
 $if mode=vi
     set keymap vi-command
     "gg": beginning-of-history
     "G": end-of-history
     set keymap vi-insert
+    "\C-o": " | less"
+    "\C-a": next-history
+    "\C-b": previous-history
+    "\C-w": backward-kill-word
     "\e.": insert-last-argument
     "\C-l": clear-screen
 $endif

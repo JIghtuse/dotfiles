@@ -10,9 +10,6 @@ ZSH_THEME="uminimal"
 # zhann nanotech
 
 export EDITOR='vim'
-bindkey -v
-bindkey '^R' history-incremental-pattern-search-backward
-bindkey '\e.' insert-last-word
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -99,3 +96,9 @@ lss(){ tree $@ | less }
 wiki(){ dig +short txt $(echo "$*" | tr ' ' _).wp.dg.cx }
 cdd(){ cd "$1" && ls; }
 lls(){ locate "$*" | less}
+
+bindkey -v
+bindkey -s '^O' ' | less'
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^[.' insert-last-word
+bindkey "^[w" backward-kill-word

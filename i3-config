@@ -154,11 +154,7 @@ bindsym $mod+n exec numlockx toggle
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +10% && killall -SIGUSR1 i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -10% && killall -SIGUSR1 i3status
-bindsym XF86WebCam exec kamerka
 bindsym XF86Launch1 exec vlc
-bindsym XF86TouchpadToggle exec ~/code/scripts/toggle_touchpad.sh
 
 exec rsibreak
-exec /home/jightuse/code/scripts/touch.sh
 exec /home/jightuse/.i3/keys.sh
-
