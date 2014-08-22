@@ -3,7 +3,7 @@
 loadplugins '\.(js|penta)$'
 group user
 map -count -modes=n,v <C-[> <count><Esc>
-map -count -modes=c,i <C-o> <Return>
+map -count -modes=c,i <C-j> <Return>
 set defsearch=duckduckgo
 set guioptions=bCrsn
 
