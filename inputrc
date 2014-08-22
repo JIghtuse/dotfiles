@@ -5,6 +5,9 @@ $if mode=vi
     "gg": beginning-of-history
     "G": end-of-history
     set keymap vi-insert
+    "\C-o": " | less"
+    "\C-n": next-history
+    "\C-p": previous-history
     "\C-w": backward-kill-word
     "\e.": insert-last-argument
     "\C-l": clear-screen
