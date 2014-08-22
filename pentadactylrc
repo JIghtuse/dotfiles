@@ -1,4 +1,10 @@
+"hg7101
+
+loadplugins '\.(js|penta)$'
+group user
+map -count -modes=n,v <C-[> <count><Esc>
+map -count -modes=c,i <C-o> <Return>
 set defsearch=duckduckgo
-colorscheme solarized-light
 set guioptions=bCrsn
-map <C-[> <Escape>
+
+" vim: set ft=pentadactyl:
