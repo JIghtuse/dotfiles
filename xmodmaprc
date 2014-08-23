@@ -1,15 +1,16 @@
-! CapsLock now acts as Ctrl
-keycode 0x42 = Control_L
-clear Lock
-
 ! Swap Alt's and Control's
-remove mod1 = Alt_L Alt_R
-remove control = Control_L Control_R
+clear Lock
+clear control
+clear mod1
+
+keycode 0x25 = Alt_L
+keycode 0x69 = Alt_R
 
 keycode 0x40 = Control_L
 keycode 0x6c = Control_R
 add control = Control_L Control_R
-
-keycode 0x25 = Alt_L
-keycode 0x69 = Alt_R
 add mod1 = Alt_L Alt_R
+
+! CapsLock now acts as Ctrl
+keycode 0x42 = Control_L
+add control = Control_L
