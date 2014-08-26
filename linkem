@@ -4,7 +4,7 @@ pushd $HOME
 rm -f ~/.aliases ~/.bashrc ~/.inputrc ~/.zshrc ~/.pentadactylrc ~/.tmux.conf
 rm -f ~/.gdbinit
 rm -f ~/.i3/config ~/.xmodmaprc ~/.xinitrc ~/.i3status.conf ~/.i3/keys.sh
-rm -f ~/.kde/share/config/gtkrc-2.0 ~/.gitconfig
+rm -f ~/.kde/share/config/gtkrc-2.0 ~/.gitconfig ~/.hgrc
 
 ln -s $HOME/.dotfiles/aliases ~/.aliases
 ln -s $HOME/.dotfiles/bashrc ~/.bashrc
@@ -15,6 +15,7 @@ ln -s $HOME/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s $HOME/.dotfiles/gdbinit ~/.gdbinit
 ln -s $HOME/.dotfiles/gtkrc-2.0 ~/.kde/share/config/gtkrc-2.0
 ln -s $HOME/.dotfiles/gitconfig ~/.gitconfig
+ln -s $HOME/.dotfiles/hgrc ~/.hgrc
 mkdir -p ~/.i3
 ln -s $HOME/.dotfiles/i3-config ~/.i3/config
 ln -s $HOME/.dotfiles/xmodmaprc ~/.xmodmaprc
