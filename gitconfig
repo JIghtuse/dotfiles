@@ -1,0 +1,7 @@
+[user]
+	name = Boris Egorov
+	email = jightuse@gmail.com
+[push]
+	default = simple
+[grep]
+	fullname = true
