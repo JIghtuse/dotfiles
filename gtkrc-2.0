@@ -63,10 +63,6 @@ binding "gtk-vi-text-view"
   bind "<ctrl>b" { "move-cursor" (display-lines, -5, 0) }
   bind "<ctrl>e" { "move-cursor" (display-lines, -1, 0) }
   bind "<ctrl>y" { "move-cursor" (display-lines, 1, 0) }
-  bind "j" { "move-cursor" (display-lines, 1, 0) }
-  bind "k" { "move-cursor" (display-lines, -1, 0) }
-  bind "l" { "move-cursor" (logical-positions, 1, 0) }
-  bind "h" { "move-cursor" (logical-positions, -1, 0) }
 }
 
 binding "gtk-vi-tree-view"
