@@ -95,6 +95,7 @@ mkcd() { mkdir -p "$*" && cd "$*"; }
 lss(){ tree $@ | less }
 wiki(){ dig +short txt $(echo "$*" | tr ' ' _).wp.dg.cx }
 cdd(){ cd "$1" && ls; }
+fv(){ vim $(find -name $@) }
 
 bindkey -v
 bindkey -s '^O' ' | less'
