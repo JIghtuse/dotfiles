@@ -7,6 +7,9 @@
 	fullname = true
 [tag]
 	sort = version:refname
+[status]
+    short = true
+    branch = true
 
 [url "git://anongit.kde.org/"]
    insteadOf = kde:
