@@ -1,0 +1,5 @@
+# taken from http://robotsrule.us/vim/
+attrcolor b ".I"
+term xterm
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
+defbce "on"
