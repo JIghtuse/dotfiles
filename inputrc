@@ -6,6 +6,7 @@ $if mode=vi
     "G": end-of-history
     set keymap vi-insert
     "\C-o": " | less"
+    "\C-g": " | grep"
     "\C-a": next-history
     "\C-b": previous-history
     "\C-w": backward-kill-word
