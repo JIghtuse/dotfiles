@@ -60,6 +60,7 @@ export GOPATH=/home/jightuse/code/go/
 export INFERNO_ROOT=/home/jightuse/code/projects/inferno
 export EMU="-r$INFERNO_ROOT -g1366x768 -c0"
 export PATH=$INFERNO_ROOT/Linux/386/bin:$HOME/bin:/usr/local/bin:$PATH
+export TERM=screen-256color-bce
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -90,7 +91,6 @@ if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
 alias -s mp4=vlc
-alias tmux="TERM=screen-256color-bce tmux"
 mkcd() { mkdir -p "$*" && cd "$*"; }
 lss(){ tree $@ | less }
 wiki(){ dig +short txt $(echo "$*" | tr ' ' _).wp.dg.cx }
