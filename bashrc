@@ -94,5 +94,10 @@ set -o vi
 # make bash show the return code http://david.newgas.net/return_code/
 export PROMPT_COMMAND='ret=$?; if [ $ret -ne 0 ] ; then echo -e "returned \033[01;31m$ret\033[00;00m"; fi'
 
-mkcd() { mkdir -p "$*" && cd $*; }
+mkcd() {
+  mkdir -p "$@" || return
+  shift $(( $# - 1)) 
+  cd "$1"
+}
+
 cdd(){ cd "$1" && ls; }
