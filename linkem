@@ -5,7 +5,7 @@ rm -f ~/.aliases ~/.bashrc ~/.inputrc ~/.zshrc ~/.pentadactylrc ~/.tmux.conf
 rm -f ~/.gdbinit ~/.tigrc
 rm -f ~/.i3/config ~/.xmodmaprc ~/.xinitrc ~/.i3status.conf ~/.i3/keys.sh
 rm -f ~/.kde/share/config/gtkrc-2.0 ~/.gitconfig
-rm -f ~/.screenrc
+rm -f ~/.screenrc ~/.kde/share/config/kglobalshortcutsrc 
 
 ln -s $HOME/.dotfiles/aliases ~/.aliases
 ln -s $HOME/.dotfiles/bashrc ~/.bashrc
@@ -17,6 +17,7 @@ ln -s $HOME/.dotfiles/gdbinit ~/.gdbinit
 ln -s $HOME/.dotfiles/tigrc ~/.tigrc
 ln -s $HOME/.dotfiles/screenrc ~/.screenrc
 ln -s $HOME/.dotfiles/gitconfig ~/.gitconfig
+ln -s $HOME/.dotfiles/kglobalshortcutsrc ~/.kde/share/config/kglobalshortcutsrc 
 mkdir -p ~/.i3
 ln -s $HOME/.dotfiles/i3-config ~/.i3/config
 ln -s $HOME/.dotfiles/xmodmaprc ~/.xmodmaprc
