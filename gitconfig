@@ -21,3 +21,6 @@
    pushInsteadOf = kde:
 [url "git@git.kde.org:"]
 	pushInsteadOf = kde:
+
+[url "git://git.gnome.org/"]
+	insteadOf = gnome:
