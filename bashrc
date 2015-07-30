@@ -104,3 +104,4 @@ mkcd() {
 }
 
 cdd(){ cd "$1" && ls; }
+shopt -s autocd
