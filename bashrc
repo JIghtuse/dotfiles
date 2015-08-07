@@ -104,4 +104,6 @@ mkcd() {
 }
 
 cdd(){ cd "$1" && ls; }
+findbin(){ dpkg --listfiles "$1" | grep bin; }
+
 shopt -s autocd
