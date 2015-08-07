@@ -68,8 +68,6 @@ if ! shopt -oq posix; then
 fi
 export LD_LIBRARY_PATH=/usr/local/lib
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-export GREP_OPTIONS='--color=auto'
-
 
 SSH_ENV=$HOME/.ssh/environment
    
