@@ -1,12 +1,12 @@
 [user]
-	name = Boris Egorov
-	email = egorov@linux.com
+    name = Boris Egorov
+    email = egorov@linux.com
 [push]
-	default = simple
+    default = simple
 [grep]
-	fullname = true
+    fullname = true
 [tag]
-	sort = version:refname
+    sort = version:refname
 [status]
     short = true
     branch = true
@@ -16,11 +16,20 @@
     ch = checkout
 
 [url "git://anongit.kde.org/"]
-   insteadOf = kde:
+    insteadOf = kde:
 [url "ssh://git@git.kde.org/"]
-   pushInsteadOf = kde:
+    pushInsteadOf = kde:
 [url "git@git.kde.org:"]
-	pushInsteadOf = kde:
+    pushInsteadOf = kde:
 
 [url "git://git.gnome.org/"]
-	insteadOf = gnome:
+    insteadOf = gnome:
+[core]
+    editor = vim
+[diff]
+    tool = meld
+[merge]
+    tool = meld
+[rebase]
+    autostash = true
+    autosquash = true
