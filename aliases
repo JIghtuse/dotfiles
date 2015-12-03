@@ -10,7 +10,6 @@ alias gdb='gdb -q'
 alias v='vim'
 alias gv='gvim'
 alias vc='vim -u NONE' # "clean" vim, run without config
-alias grep='grep --color=auto'
 
 # Apt
 alias ac='apt-cache'
@@ -25,4 +24,4 @@ alias gt='gdb -tui -nh'
 alias ct='cgdb -nh'
 alias py='python3' # I often mistype it as pytohn, so let's not type it at all
 alias ipy='ipython3'
-alias i='ip -4 --oneline a'
+alias i='ip -4 -oneline a | column -t | colrm 35'
