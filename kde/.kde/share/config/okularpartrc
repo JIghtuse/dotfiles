@@ -1,0 +1,11 @@
+[$Version]
+update_info=okular.upd:sep_settings
+
+[Core General]
+ObeyDRM=false
+
+[General]
+ShellOpenFileInTabs=true
+
+[Main View]
+SplitterSizes=331,1509
