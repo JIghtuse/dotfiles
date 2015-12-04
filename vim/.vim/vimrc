@@ -1,0 +1,133 @@
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ervandew/ag'
+Plugin 'majutsushi/tagbar'
+Plugin 'matchit.zip'
+Plugin 'mhinz/vim-signify'
+Plugin 'mileszs/ack.vim.git'
+" Plugin 'racer-rust/vim-racer'
+Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'sjl/gundo.vim'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-endwise.git'
+Plugin 'tpope/vim-eunuch.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-repeat.git'
+Plugin 'tpope/vim-sensible.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'tpope/vim-unimpaired.git'
+Plugin 'tpope/vim-vinegar.git'
+Plugin 'troydm/easybuffer.vim.git'
+
+set hidden
+
+filetype plugin indent on
+runtime ftplugin/man.vim
+
+" Global settings, can be override in ftplugin
+syntax enable
+
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+set laststatus=2
+
+set t_Co=256
+set background=light
+
+set autoindent
+set backspace=indent,eol,start
+set cursorcolumn
+set cursorline
+set fileencodings=utf-8,cp1251
+set smartindent
+
+set wildmode=list:longest,full
+set wildmenu
+set wildignore+=.hg,.git,.svn,*.o,*.d
+set lazyredraw
+
+set completeopt=preview,menu,menuone
+set diffopt+=filler
+set foldlevelstart=10
+set foldmethod=syntax
+set foldnestmax=10
+set hlsearch
+set ignorecase
+set incsearch
+set number
+set pumheight=20
+set relativenumber
+set smartcase
+
+set backup
+set backupdir=/var/tmp,/tmp
+set backupskip=/tmp/*
+set colorcolumn=80
+set directory=/var/tmp,/tmp
+set undodir=~/.vim/undodir/
+set undofile
+set undolevels=1000
+set undolevels=128
+set undoreload=10000
+set writebackup
+
+set pastetoggle=<leader>p
+set clipboard=unnamedplus " http://vim.wikia.com/wiki/Accessing_the_system_clipboard
+
+let g:ackprg = "ag --vimgrep"
+let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
+let g:solarized_termcolors=256
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_always_populate_location_list = 1
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 0
+let mapleader = ","
+
+nmap <leader>j :YcmCompleter GoTo<CR>
+nmap <leader>f :YcmCompleter FixIt<CR>
+nmap <leader>y :YcmCompleter 
+
+function! Replace()
+    let s:word = input("Replace " . expand('<cword>') . " with:")
+    :exe 'bufdo! %s/\<' . expand('<cword>') . '\>/' . s:word . '/gce'
+    :unlet! s:word
+endfunction
+map <Leader>r :call Replace()<CR>
+nnoremap <leader>a :%s//<left>
+
+nmap <C-Up> [e
+nmap <C-Down> ]e
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
+nnoremap <Space> za
+nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
+
+nmap <leader>g :Ack <cword><CR>
+nmap <leader>q 0yt=A<C-r>=<C-r>"<CR><Esc>
+nmap <leader>e :EasyBufferToggle<CR>
+nmap <leader>t :TagbarToggle<CR><C-w><C-w>
+nmap <leader>u :GundoToggle<CR>
+nmap <silent> <leader>s :set spell!<CR>
+nmap <silent> <leader>l :set list!<CR>
+
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
