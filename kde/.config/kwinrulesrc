@@ -1,0 +1,32 @@
+[1]
+Description=Application settings for empathy
+clientmachine=nebula
+clientmachinematch=0
+desktop=8
+desktoprule=3
+wmclass=empathy
+wmclasscomplete=false
+wmclassmatch=1
+
+[2]
+Description=Application settings for icedove
+clientmachine=nebula
+clientmachinematch=0
+desktop=2
+desktoprule=3
+wmclass=mail icedove
+wmclasscomplete=true
+wmclassmatch=1
+
+[3]
+Description=Application settings for iceweasel
+clientmachine=nebula
+clientmachinematch=0
+desktop=2
+desktoprule=3
+wmclass=navigator iceweasel
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=3
