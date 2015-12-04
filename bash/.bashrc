@@ -104,3 +104,5 @@ cdd(){ cd "$1" && ls; }
 findbin(){ dpkg --listfiles "$1" | grep bin; }
 
 shopt -s autocd
+shopt -s cdable_vars
+dot=$HOME/.dotfiles
