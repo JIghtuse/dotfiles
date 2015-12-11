@@ -29,6 +29,8 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-unimpaired.git'
 Plugin 'tpope/vim-vinegar.git'
 Plugin 'troydm/easybuffer.vim.git'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 set hidden
 
@@ -101,6 +103,10 @@ let mapleader = ","
 nmap <leader>j :YcmCompleter GoTo<CR>
 nmap <leader>f :YcmCompleter FixIt<CR>
 nmap <leader>y :YcmCompleter 
+
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 function! Replace()
     let s:word = input("Replace " . expand('<cword>') . " with:")
