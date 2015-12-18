@@ -7,7 +7,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
-"Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized.git'
@@ -107,6 +107,7 @@ nmap <leader>j :YcmCompleter GoTo<CR>
 nmap <leader>f :YcmCompleter FixIt<CR>
 nmap <leader>y :YcmCompleter 
 
+let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
