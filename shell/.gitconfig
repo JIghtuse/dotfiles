@@ -3,8 +3,6 @@
     email = egorov@linux.com
 [push]
     default = simple
-[grep]
-    fullname = true
 [tag]
     sort = version:refname
 [status]
