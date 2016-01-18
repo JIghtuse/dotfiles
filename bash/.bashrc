@@ -22,7 +22,6 @@ fi
 # User specific aliases and functions
 export PROMPT_COMMAND='ret=$?; if [ $ret -ne 0 ] ; then echo -e "returned \033[01;31m$ret\033[00;00m"; fi'
 export CPPCHECK=$HOME/projects/cppcheck/cppcheck
-export PATH=$HOME/.local/bin:$HOME/.cabal/bin:$PATH
 
 c() {
     cd "$1";
