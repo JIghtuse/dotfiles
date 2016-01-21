@@ -12,6 +12,7 @@
     d = diff --word-diff=color
     co = commit
     ch = checkout
+    p = !git fetch && git rebase --autostash
 
 [url "git://anongit.kde.org/"]
     insteadOf = kde:
@@ -28,6 +29,8 @@
     tool = meld
 [merge]
     tool = meld
+[pull]
+    rebase = true
 [rebase]
     autostash = true
     autosquash = true

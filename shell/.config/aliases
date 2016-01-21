@@ -7,6 +7,7 @@ alias d='df -h'
 alias grep='grep --color=auto'
 alias dus='du -sh'
 alias gdb='gdb -q'
+alias vim='nvim'
 alias v='vim'
 alias gv='gvim'
 alias vc='vim -u NONE' # "clean" vim, run without config
