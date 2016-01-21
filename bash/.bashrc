@@ -20,7 +20,6 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-export PROMPT_COMMAND='ret=$?; if [ $ret -ne 0 ] ; then echo -e "returned \033[01;31m$ret\033[00;00m"; fi'
 export CPPCHECK=$HOME/projects/cppcheck/cppcheck
 
 c() {
@@ -38,3 +37,4 @@ set -o vi
 shopt -s autocd
 shopt -s cdable_vars
 dot=$HOME/.dotfiles
+DISABLE_AUTO_TITLE=true
