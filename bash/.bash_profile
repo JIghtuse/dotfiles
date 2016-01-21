@@ -7,6 +7,6 @@ fi
 
 # User specific environment and startup programs
 
-PATH=$HOME/.cargo/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:$PATH
+PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/bin:$PATH
 
 export PATH
