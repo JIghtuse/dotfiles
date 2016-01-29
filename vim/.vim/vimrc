@@ -67,9 +67,10 @@ set lazyredraw
 
 set completeopt=preview,menu,menuone
 set diffopt+=filler
-set foldlevelstart=10
+set foldlevelstart=2
 set foldmethod=syntax
 set foldnestmax=10
+let g:xml_syntax_folding=1
 set hlsearch
 set ignorecase
 set incsearch
