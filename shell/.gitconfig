@@ -25,6 +25,7 @@
     insteadOf = gnome:
 [core]
     editor = vim
+    excludesfile = /home/jightuse/.config/gitignore_global
 [diff]
     tool = meld
 [merge]
