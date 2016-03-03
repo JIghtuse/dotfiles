@@ -6,7 +6,6 @@
 [tag]
     sort = version:refname
 [status]
-    short = true
     branch = true
 [alias]
     d = diff --word-diff=color
@@ -25,7 +24,7 @@
     insteadOf = gnome:
 [core]
     editor = vim
-    excludesfile = /home/jightuse/.config/gitignore_global
+    excludesfile = ~/.config/gitignore_global
 [diff]
     tool = meld
 [merge]
