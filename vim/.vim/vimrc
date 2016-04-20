@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'dietsche/vim-lastplace.git'
 Plugin 'ervandew/ag'
 Plugin 'honza/vim-snippets'
 Plugin 'idris-hackers/idris-vim'
@@ -100,7 +101,6 @@ let g:solarized_termcolors=256
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_always_populate_location_list = 1
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 0
 let mapleader = ","
 
@@ -112,6 +112,7 @@ let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:lastplace_ignore = "gitcommit"
 
 function! Replace()
     let s:word = input("Replace " . expand('<cword>') . " with:")
