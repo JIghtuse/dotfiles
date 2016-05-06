@@ -11,6 +11,7 @@ alias vim='nvim'
 alias v='vim'
 alias gv='gvim'
 alias vc='vim -u NONE' # "clean" vim, run without config
+alias re='pkill -HUP -x'
 
 # Apt
 alias ac='apt-cache'
@@ -26,3 +27,4 @@ alias ct='cgdb -nh'
 alias py='python3' # I often mistype it as pytohn, so let's not type it at all
 alias ipy='ipython3'
 alias i='ip -4 -oneline a | column -t | colrm 35'
+alias tldr='man -s tldr'
