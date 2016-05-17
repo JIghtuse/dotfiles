@@ -66,6 +66,8 @@ set wildmenu
 set wildignore+=.hg,.git,.svn,*.o,*.d
 set lazyredraw
 
+set termguicolors
+
 set completeopt=preview,menu,menuone
 set diffopt+=filler
 set foldlevelstart=2
