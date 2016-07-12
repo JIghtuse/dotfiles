@@ -36,6 +36,7 @@ Plugin 'tpope/vim-surround.git'
 Plugin 'tpope/vim-unimpaired.git'
 Plugin 'tpope/vim-vinegar.git'
 Plugin 'troydm/easybuffer.vim.git'
+call vundle#end()
 
 set hidden
 
