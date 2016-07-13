@@ -26,6 +26,6 @@ alias gt='gdb -tui -nh'
 alias ct='cgdb -nh'
 alias py='python3' # I often mistype it as pytohn, so let's not type it at all
 alias ipy='ipython3'
-alias i='ip -4 -oneline a | column -t | colrm 35'
+alias i="ip -4 -o a|tr -s ' '|cut -d ' ' -f2,4|column -t"
 alias tldr='man -s tldr'
 alias g="g++ ${CXXFLAGS}"
