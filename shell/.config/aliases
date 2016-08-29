@@ -29,3 +29,5 @@ alias ipy='ipython3'
 alias i="ip -4 -o a|tr -s ' '|cut -d ' ' -f2,4|column -t"
 alias tldr='man -s tldr'
 alias g="g++ ${CXXFLAGS}"
+alias o='popd'
+alias p='pushd'
