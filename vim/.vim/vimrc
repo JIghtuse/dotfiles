@@ -11,7 +11,7 @@ Plugin 'Shougo/vimshell.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'frankier/neovim-colors-solarized-truecolor-only'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'dietsche/vim-lastplace.git'
@@ -53,7 +53,6 @@ set tabstop=4
 
 set laststatus=2
 
-set t_Co=256
 set background=light
 
 set autoindent
@@ -101,7 +100,6 @@ set clipboard=unnamedplus " http://vim.wikia.com/wiki/Accessing_the_system_clipb
 
 let g:ackprg = "ag --vimgrep"
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
-let g:solarized_termcolors=256
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_always_populate_location_list = 1
 let g:ycm_add_preview_to_completeopt = 1
@@ -112,7 +110,7 @@ nmap <leader>j :YcmCompleter GoTo<CR>
 nmap <leader>f :YcmCompleter FixIt<CR>
 nmap <leader>y :YcmCompleter 
 
-let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
