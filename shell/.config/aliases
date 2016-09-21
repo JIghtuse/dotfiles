@@ -35,3 +35,4 @@ alias clang++='clang++ -fcolor-diagnostics'
 
 alias o='popd'
 alias p='pushd'
+alias tldr='man -s tldr'
