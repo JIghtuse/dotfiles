@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'JIghtuse/fix-my-typos-vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Shougo/vimshell.vim'
@@ -154,3 +155,4 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
+autocmd VimEnter * FixTypos
