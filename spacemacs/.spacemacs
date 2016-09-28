@@ -261,7 +261,7 @@ you should place your code here."
                                   (other . "bsd")))
 
   (set-variable 'ycmd-server-command '("python3" "/home/jightuse/.vim/bundle/YouCompleteMe/third_party/ycmd/ycmd/"))
-  (setq helm-ag-base-command "rg --vimgrep")
+  (setq helm-ag-base-command "rg --no-heading --vimgrep")
 
   )
 
