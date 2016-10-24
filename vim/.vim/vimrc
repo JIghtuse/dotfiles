@@ -68,7 +68,9 @@ set wildmenu
 set wildignore+=.hg,.git,.svn,*.o,*.d
 set lazyredraw
 
-set termguicolors
+if v:version >= 800
+    set termguicolors
+endif
 
 set completeopt=preview,menu,menuone
 set diffopt+=filler
