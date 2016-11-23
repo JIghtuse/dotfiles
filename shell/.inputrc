@@ -10,6 +10,7 @@ $if mode=vi
     "\C-a": next-history
     "\C-b": previous-history
     "\C-w": backward-kill-word
+    "\C-e": unix-filename-rubout
     "\e.": insert-last-argument
     "\C-l": clear-screen
 $endif
