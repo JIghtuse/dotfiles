@@ -27,10 +27,11 @@
     excludesfile = ~/.config/gitignore_global
 [diff]
     tool = meld
+    indentHeuristic = true
 [merge]
     tool = meld
 [pull]
-    rebase = true
+    ff-only = true
 [rebase]
     autostash = true
     autosquash = true
