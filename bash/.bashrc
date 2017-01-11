@@ -38,3 +38,7 @@ shopt -s autocd
 shopt -s cdable_vars
 dot=$HOME/.dotfiles
 DISABLE_AUTO_TITLE=true
+
+if [ -f ~/.config/machine-specific.sh ]; then
+    . ~/.config/machine-specific.sh
+fi
