@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     markdown
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -30,6 +31,7 @@ values."
      ycmd
      python
      shell-scripts
+     haskell
      ;; git
      ;; markdown
      ;; org
@@ -277,6 +279,7 @@ you should place your code here."
  '(ansi-color-names-vector
    ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(compilation-message-face (quote default))
+ '(evil-want-Y-yank-to-eol t)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
    (quote
@@ -295,7 +298,7 @@ you should place your code here."
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (fish-mode pyvenv pytest pyenv-mode py-yapf pip-requirements hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic flycheck-ycmd flycheck-pos-tip flycheck company-ycmd f ycmd request-deferred request deferred helm-company helm-c-yasnippet company-statistics company-quickhelp pos-tip company-c-headers company auto-yasnippet yasnippet ac-ispell auto-complete disaster cmake-mode clang-format solarized-theme zenburn-theme monokai-theme ws-butler window-numbering volatile-highlights vi-tilde-fringe spaceline s powerline smooth-scrolling restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox hydra spinner page-break-lines open-junk-file neotree move-text macrostep lorem-ipsum linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-args evil-anzu anzu eval-sexp-fu highlight elisp-slime-nav define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build use-package which-key bind-key bind-map evil spacemacs-theme)))
+    (mmm-mode markdown-toc markdown-mode gh-md intero hlint-refactor hindent helm-hoogle haskell-snippets flycheck-haskell company-ghci company-ghc ghc haskell-mode company-cabal cmm-mode yapfify uuidgen toc-org py-isort org-plus-contrib org-bullets live-py-mode link-hint insert-shebang hide-comnt eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff goto-chg undo-tree dumb-jump diminish company-shell column-enforce-mode fish-mode pyvenv pytest pyenv-mode py-yapf pip-requirements hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic flycheck-ycmd flycheck-pos-tip flycheck company-ycmd f ycmd request-deferred request deferred helm-company helm-c-yasnippet company-statistics company-quickhelp pos-tip company-c-headers company auto-yasnippet yasnippet ac-ispell auto-complete disaster cmake-mode clang-format solarized-theme zenburn-theme monokai-theme ws-butler window-numbering volatile-highlights vi-tilde-fringe spaceline s powerline smooth-scrolling restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox hydra spinner page-break-lines open-junk-file neotree move-text macrostep lorem-ipsum linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-args evil-anzu anzu eval-sexp-fu highlight elisp-slime-nav define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build use-package which-key bind-key bind-map evil spacemacs-theme)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#A6E22E")
  '(pos-tip-foreground-color "#272822")
